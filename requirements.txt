@@ -1,0 +1,11 @@
+uvicorn
+langchain
+openai
+python-dotenv
+langchain-openai
+langchain-community
+langchain-text-splitters
+langchain-core
+langchain-chroma
+python-multipart
+pypdf
