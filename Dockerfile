@@ -9,12 +9,12 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt ./
-COPY . ./src/
+COPY . ./
 
 RUN pip3 install -r requirements.txt
 
-EXPOSE 8000
+EXPOSE 7860
 
 # HEALTHCHECK CMD curl --fail http://localhost:8000/_stcore/health
 
-ENTRYPOINT ["uvicorn", "_app:app", "", "--host=0.0.0.0 ", " --port=8000", "--reload"]
+ENTRYPOINT ["uvicorn", "_app:app", "", "--host=0.0.0.0 ", " --port=7860", "--reload"]
