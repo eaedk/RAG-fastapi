@@ -182,7 +182,7 @@ async def stream_chat_response(message: str):
     async for part in qa_chain.astream(message):
         # response_parts.append(part)  # Collect all parts of the response
         # Yield each part as a chunk for streaming to the client
-        # print(part, end="", flush=True)
+        print(part, end="", flush=True)
         yield part
 
     # # Final join to return the complete response after streaming
